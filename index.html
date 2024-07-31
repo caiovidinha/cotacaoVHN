@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cotação</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Formulário de Cotação</h2>
+        <form id="cotacaoForm" class="space-y-4">
+            <!-- Opções de Passagem Aérea -->
+            <h3 class="text-xl font-semibold">Opções de Passagem Aérea</h3>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Tipo de voo</label>
+                <select id="tipoVoo" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                    <option value="">Selecione</option>
+                    <option value="ida">Somente Ida</option>
+                    <option value="idaVolta">Ida e Volta</option>
+                </select>
+            </div>
+            <div id="datasHorariosVoo" class="hidden">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Data de Ida</label>
+                    <input type="date" id="dataIda" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Horário de Ida</label>
+                    <input type="time" id="horarioIda" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div id="dataHorarioVoltaContainer" class="hidden">
+                    <label class="block text-sm font-medium text-gray-700">Data de Volta</label>
+                    <input type="date" id="dataVolta" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                    <label class="block text-sm font-medium text-gray-700">Horário de Volta</label>
+                    <input type="time" id="horarioVolta" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Origem</label>
+                <input type="text" id="origem" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Cidade de Origem">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Destino</label>
+                <input type="text" id="destino" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Cidade de Destino">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Bagagem</label>
+                <input type="text" id="bagagem" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Bagagem">
+            </div>
+
+            <!-- Opções de Hospedagem -->
+            <h3 class="text-xl font-semibold">Opções de Hospedagem</h3>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Código da Hospedagem na Hoteldo</label>
+                <input type="text" id="codigoHospedagem" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Código da Hospedagem">
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md shadow-sm">Enviar</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
